@@ -1,6 +1,38 @@
 @font-face {
-    font-family: ;
-    src: url(/nunito-font/);
+    font-family: 'Nunito';
+    src: url('/nunito-font/Nunito-Bold.eot');
+    src: url('/nunito-font/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/nunito-font/Nunito-Bold.woff2') format('woff2'),
+        url('/nunito-font/Nunito-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/nunito-font/Nunito-Regular.eot');
+    src: url('/nunito-font/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/nunito-font/Nunito-Regular.woff2') format('woff2'),
+        url('/nunito-font/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/nunito-font/Nunito-Medium.eot');
+    src: url('/nunito-font/Nunito-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/nunito-font/Nunito-Medium.woff2') format('woff2'),
+        url('/nunito-font/Nunito-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Nunito';
 }
 
 :root {
@@ -20,6 +52,7 @@
 
     /* spacing customize */
     --dr-space-2: .313rem;
+    --dr-space-2-3: .375rem;
     --dr-space-2-4: .625rem;
     --dr-space-2-5: .75rem;
     --dr-space-2-7: .938rem;
@@ -480,14 +513,16 @@ ol {
                                     left: -20px;
 
                                 }
-
-                                .bg_color {
-                                    &::after {
-                                        background: var(--dr-orange);
-                                    }
-                                }
-
                             }
+                        }
+
+                        .bg_color {
+                            span {
+                                &::after {
+                                    background: var(--dr-orange);
+                                }
+                            }
+
                         }
                     }
 
@@ -510,10 +545,59 @@ ol {
             .card_body {
                 padding: var(--dr-space-3-5);
 
-                .card_img {}
+                .table-responsive {
+                    table {
+                        margin: var(--dr-space-2-3) 0;
+
+                        thead {
+                            /* background: #fafbfe;
+                            border-bottom: 1px solid #e9ecef; */
+
+                            tr {
+
+                                th {
+                                    padding: 10px 30px 10px 10px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                &:hover {
+                                    background: #f5f5f5 !important;
+                                }
+
+                                td {
+                                    padding: var(--dr-space-2-4);
+
+                                    a {
+                                        img {
+                                            margin-right: var(--dr-space-2-4);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
             }
         }
 
 
+    }
+
+    .row {
+        .expired_product {
+            padding: var(--dr-space-3-5);
+            background: var(--dr-white);
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            margin-bottom: var(--dr-space-2-4);
+        }
     }
 }
