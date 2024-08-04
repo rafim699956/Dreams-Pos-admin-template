@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Nunito';
-    src: url('/nunito-font/Nunito-Bold.eot');
-    src: url('/nunito-font/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
-        url('/nunito-font/Nunito-Bold.woff2') format('woff2'),
-        url('/nunito-font/Nunito-Bold.woff') format('woff');
+    src: url('../nunito-font/Nunito-Bold.eot');
+    src: url('../nunito-font/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../nunito-font/Nunito-Bold.woff2') format('woff2'),
+        url('../nunito-font/Nunito-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -11,10 +11,10 @@
 
 @font-face {
     font-family: 'Nunito';
-    src: url('/nunito-font/Nunito-Regular.eot');
-    src: url('/nunito-font/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/nunito-font/Nunito-Regular.woff2') format('woff2'),
-        url('/nunito-font/Nunito-Regular.woff') format('woff');
+    src: url('../nunito-font/Nunito-Regular.eot');
+    src: url('../nunito-font/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../nunito-font/Nunito-Regular.woff2') format('woff2'),
+        url('../nunito-font/Nunito-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -22,10 +22,10 @@
 
 @font-face {
     font-family: 'Nunito';
-    src: url('/nunito-font/Nunito-Medium.eot');
-    src: url('/nunito-font/Nunito-Medium.eot?#iefix') format('embedded-opentype'),
-        url('/nunito-font/Nunito-Medium.woff2') format('woff2'),
-        url('/nunito-font/Nunito-Medium.woff') format('woff');
+    src: url('../nunito-font/Nunito-Medium.eot');
+    src: url('../nunito-font/Nunito-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../nunito-font/Nunito-Medium.woff2') format('woff2'),
+        url('../nunito-font/Nunito-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -300,6 +300,28 @@ ol {
         z-index: 999;
 
         .navbar {
+            position: relative;
+
+            .show {
+                min-width: 10rem;
+                min-height: 8rem;
+                background: var(--dr-white);
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+                position: absolute;
+                inset: 60px 25px 0 auto;
+                border-radius: var(--dr-border-radius-1);
+                border: 1px solid black;
+
+                ul {
+                    flex-direction: column !important;
+                    margin-left: 0 !important;
+
+                    li {
+                        width: 100% !important;
+                    }
+                }
+            }
+
             .header_left {
                 width: var(--dr-sizes-40);
                 padding: 0 var(--dr-space-3-5);
@@ -860,7 +882,9 @@ ol {
             background: var(--dr-white);
 
             a {
+                min-width: 50px;
                 width: 50px;
+                min-height: 50px;
                 height: 50px;
                 border-radius: 5px;
                 overflow: hidden;
@@ -937,5 +961,12 @@ ol {
             --bs-btn-active-bg: #424b52;
             --bs-btn-active-border-color: #424b52;
         }
+    }
+}
+
+/* Responsive style */
+@media only screen and (min-width:991px) {
+    .header_left {
+        border-right: 1px solid #e8ebed;
     }
 }
