@@ -50,6 +50,7 @@
     --dr-body-line-height: 1.5;
     --dr-body-color: #212b36;
     --dr-widget-border: #e8ebed;
+
     /* spacing customize */
     --dr-space-2: .313rem;
     --dr-space-2-3: .375rem;
@@ -161,6 +162,8 @@ ol {
     max-width: 260px;
     width: 100%;
     padding: var(--dr-space-3-5);
+    border-right: 1px solid #e8ebed;
+    background: var(--dr-white);
     height: 100vh;
     position: fixed;
     top: 60px;
@@ -169,16 +172,17 @@ ol {
 
     &::-webkit-scrollbar {
         width: 7px;
-        height: 100%;
     }
 
     &::-webkit-scrollbar-track {
-        background: rgba(204, 204, 204, 0.1);
+        background: var(--dr-white);
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: rgb(204, 204, 204);
+        opacity: 0.4;
         border-radius: 7px;
+        height: 41px;
         border: 3px solid rgb(204, 204, 204);
     }
 
@@ -222,6 +226,7 @@ ol {
             }
 
             .nav-link {
+
                 &:after {
                     display: none;
                 }
@@ -290,7 +295,6 @@ ol {
 /* main content style */
 
 .main_content {
-    flex-grow: 1;
     position: relative;
 
     .header {
@@ -303,14 +307,14 @@ ol {
             position: relative;
 
             .show {
-                min-width: 10rem;
+                /* min-width: 10rem;
                 min-height: 8rem;
                 background: var(--dr-white);
                 box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
                 position: absolute;
                 inset: 60px 25px 0 auto;
                 border-radius: var(--dr-border-radius-1);
-                border: 1px solid black;
+                border: 1px solid black; */
 
                 ul {
                     flex-direction: column !important;
@@ -360,11 +364,14 @@ ol {
 
             .header_right {
                 flex-grow: 1;
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+                padding-right: var(--dr-space-2-7);
 
                 .dropdown-toggle {
                     &::after {
                         border-top: transparent;
                         border-right: transparent;
+                        display: none;
                     }
                 }
 
@@ -431,12 +438,12 @@ ol {
                             transition: all .5s ease;
                             box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
                             min-width: 350px;
+                            min-height: 300px;
+                            position: absolute;
 
                             .notification_dropdown_header {
                                 padding: 0 var(--dr-space-2-5);
                                 border-bottom: 1px solid #eee;
-                                position: fixed;
-                                width: 350px;
                                 background: var(--dr-white);
 
                                 span {
@@ -448,30 +455,42 @@ ol {
                                     padding: var(--dr-space-2-5);
                                     color: var(--dr-orange);
                                     font-size: 11px;
-
                                 }
+                            }
 
-                                .notifi_content {
-                                    ul {
-                                        li {
-                                            border-bottom: 1px solid #eee;
+                            .notifi_content {
+                                ul {
+                                    li {
+                                        border-bottom: 1px solid #eee;
 
-                                            a {
-                                                div {
-                                                    span {
+                                        a {
+                                            .notifi_cont {
+                                                padding: var(--dr-space-2-5);
+
+                                                .img_wrapper {
+                                                    margin-right: 10px;
+                                                    display: inline-block;
+
+                                                    img {
                                                         width: 34px;
                                                         height: 34px;
                                                         border-radius: 50%;
+                                                    }
+                                                }
 
-                                                        img {
-                                                            width: 34px;
-                                                            height: 34px;
-                                                            border-radius: 50%;
+                                                div {
+                                                    p {
+                                                        color: #989c9e;
+                                                        font-size: 14px;
+                                                        font-weight: 400;
+
+                                                        span {
+                                                            color: #333;
+                                                            font-weight: 500;
                                                         }
                                                     }
                                                 }
                                             }
-
                                         }
                                     }
                                 }
@@ -520,6 +539,22 @@ ol {
                         }
                     }
                 }
+
+                ul {
+                    li {
+                        padding-right: 5px;
+
+                        a {
+                            color: #ff9f43;
+                            display: block;
+
+                            i {
+                                font-weight: 900;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -540,6 +575,8 @@ ol {
             margin-bottom: var(--dr-space-3-8);
             border-radius: var(--dr-border-radius-2);
             gap: var(--dr-space-3-5);
+            border: 1px solid #e8ebed;
+            background: var(--dr-white);
 
             .dash_widgeting {
                 span {
@@ -838,6 +875,7 @@ ol {
     .content {
         max-width: 100%;
         left: 0;
+        z-index: 999;
     }
 
     .header {
