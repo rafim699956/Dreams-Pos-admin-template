@@ -13,7 +13,7 @@
 
 <body>
     <div class="main_wrapper">
-        <div class="sidebar border-end overflow-y-scroll">
+        <div class="sidebar overflow-y-scroll">
             <ul class="navbar-nav sidebar-nav">
                 <li class="nav-item">
                     <a class="nav-link active d-flex" aria-current="page" href="#">
@@ -706,102 +706,166 @@
     </div>
     <div class="main_content">
         <header class="header bg-white">
-            <nav class="navbar navbar-expand-lg py-0 h-100 justify-content-between">
+            <nav class="navbar py-0 h-100 justify-content-between">
                 <a class="btn aside_toggle d-lg-none d-inline ms-2" role="button">
                     <i class="fa-solid fa-bars"></i>
                 </a>
-                <div class="header_left border-lg-end d-flex align-items-center justify-content-between h-100">
+                <div
+                    class="header_left d-flex align-items-center justify-content-lg-between justify-content-center h-100">
                     <a class="navbar-brand main_logo d-inline-block py-0 me-0" href="#">
                         <img class="img-fluid w-100" src="images/logo.png" alt="logo">
                     </a>
                     <a class="notification_btn d-inline-block d-none d-lg-block" href=""></a>
                 </div>
-                <div class="header_right border-bottom py-0 h-100 d-flex align-items-center">
-                    <ul class="navbar-nav ms-auto py-0 h-100 align-items-center flex-row">
-                        <li
-                            class="nav-item py-0 h-100 d-inline-flex align-items-center justify-content-center d-none d-lg-block">
-                            <a class="nav-link" aria-current="page" href="#">
-                                <img class="icon" src="images/icons/search.svg" alt="search">
-                            </a>
-                        </li>
-                        <li class="nav-item py-0 h-100 d-inline-flex align-items-center justify-content-center">
-                            <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="images/flags/us1.png" alt="us flag">
-                            </a>
-                            <ul class="dropdown-menu py-0">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="images/flags/us.png" class="me-1" height="18" alt="">
-                                        <span>English</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="images/flags/fr.png" class="me-1" height="18" alt="">
-                                        <span>French</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="images/flags/es.png" class="me-1" height="18" alt="">
-                                        <span>Spanish</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="images/flags/de.png" class="me-1" height="18" alt="">
-                                        <span>German</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li
-                            class="notification_badge nav-item py-0 dropdown h-100 d-inline-flex align-items-center justify-content-center">
-                            <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="icon" src="images/icons/notification-bing.svg" alt="us flag">
-                            </a>
-                            <ul class="dropdown-menu notification_dropdown">
-                                <div
-                                    class="notification_dropdown_header d-flex justify-content-between align-items-center">
-                                    <span>Notifications</span>
-                                    <a href="#">CLEAR ALL</a>
-                                </div>
-                                <div class="notifi_content">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <span>
-                                                        <img class="img-fluid w-100" src="images/profiles/avatar-02.jpg"
-                                                            alt="">
-                                                    </span>
-                                                    <div>
-                                                        <p></p>
+                <div class="header_right py-0 h-100 d-flex align-items-center">
+                    <div class="d-none d-sm-block ms-auto h-100">
+                        <ul class="navbar-nav ms-auto py-0 h-100 align-items-center flex-row">
+                            <li
+                                class="nav-item py-0 h-100 d-inline-flex align-items-center justify-content-center d-none d-lg-block">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <img class="icon" src="images/icons/search.svg" alt="search">
+                                </a>
+                            </li>
+                            <li class="nav-item py-0 h-100 d-inline-flex align-items-center justify-content-center">
+                                <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/flags/us1.png" alt="us flag">
+                                </a>
+                                <ul class="dropdown-menu py-0">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/flags/us.png" class="me-1" height="18" alt="">
+                                            <span>English</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/flags/fr.png" class="me-1" height="18" alt="">
+                                            <span>French</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/flags/es.png" class="me-1" height="18" alt="">
+                                            <span>Spanish</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/flags/de.png" class="me-1" height="18" alt="">
+                                            <span>German</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="notification_badge nav-item py-0 dropdown h-100 d-inline-flex align-items-center justify-content-center">
+                                <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="icon" src="images/icons/notification-bing.svg" alt="us flag">
+                                </a>
+                                <ul class="dropdown-menu notification_dropdown">
+                                    <div
+                                        class="notification_dropdown_header d-flex justify-content-between align-items-center">
+                                        <span>Notifications</span>
+                                        <a href="#">CLEAR ALL</a>
+                                    </div>
+                                    <div class="notifi_content">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="notifi_cont d-flex">
+                                                        <span class="img_wrapper">
+                                                            <img class="" src="images/profiles/avatar-02.jpg" alt="">
+                                                        </span>
+                                                        <div>
+                                                            <p><span>John Doe </span>added new task <span>Patient
+                                                                    appointment
+                                                                    booking</span></p>
+                                                            <p>4 mins ago</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </ul>
-                        </li>
-                        <li
-                            class="online_status nav-item py-0 dropdown h-100 d-inline-flex align-items-center justify-content-center">
-                            <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="img-fluid" style="width: 38px;" src="images/profiles/avator1.jpg"
-                                    alt="profile">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="notifi_cont d-flex">
+                                                        <span class="img_wrapper">
+                                                            <img class="" src="images/profiles/avatar-03.jpg" alt="">
+                                                        </span>
+                                                        <div>
+                                                            <p><span>Tarah Shropshire </span>changed the task name
+                                                                <span>Appointment booking with payment gateway</span>
+                                                            </p>
+                                                            <p>6 mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="notifi_cont d-flex">
+                                                        <span class="img_wrapper">
+                                                            <img class="" src="images/profiles/avatar-02.jpg" alt="">
+                                                        </span>
+                                                        <div>
+                                                            <p><span>Misty Tison </span>added <span>Domenic
+                                                                    Houston</span>
+                                                                and <span>Claire Mapes</span> to project <span>Doctor
+                                                                    available module</span></p>
+                                                            <p>8 mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="notifi_cont d-flex">
+                                                        <span class="img_wrapper">
+                                                            <img class="" src="images/profiles/avatar-17.jpg" alt="">
+                                                        </span>
+                                                        <div>
+                                                            <p><span>Rolland Webber </span>completed task <span>Patient
+                                                                    and Doctor video conferencing</span></p>
+                                                            <p>12 mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li
+                                class="online_status nav-item py-0 dropdown h-100 d-inline-flex align-items-center justify-content-center">
+                                <a class="nav-link dropdown-toggle h-100 d-inline-flex align-items-center" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img-fluid" style="width: 38px;" src="images/profiles/avator1.jpg"
+                                        alt="profile">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="d-sm-none navbar-nav ms-auto py-0 h-100 align-items-center flex-row">
+                        <li>
+                            <a class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                href="#">
+                                <i class="fa fa-ellipsis-v"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
+
                         </li>
                     </ul>
                 </div>
@@ -831,16 +895,18 @@
                         <input id="aa" type="file" class="form-control" onchange="pressed()">
                     </div>
                     <input type="submit" class="btn btn-primary me-2" value="Submit">
-                    <input type="reset"
-                        class="btn btn-secondary" value="Cancel">
+                    <input type="reset" class="btn btn-secondary" value="Cancel">
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </body>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
+
 
 </html>
